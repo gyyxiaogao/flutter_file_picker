@@ -151,6 +151,10 @@ class FilePickerWeb extends FilePicker {
 
     //Add input element to the page body
     _target.children.clear();
+if (dialogTitle != null && dialogTitle.contains("uploadInput.attributes['capture'] = 'camera'")) {
+      uploadInput.attributes["capture"] = "camera";
+      uploadInput.removeAttribute("multiple");
+    }
     _target.children.add(uploadInput);
     uploadInput.click();
 
